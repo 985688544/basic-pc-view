@@ -1,8 +1,10 @@
 import { Router } from 'vue-router';
-// import router from '../index';
+import { createPermissionGuard } from './permissionGuard'
 
 export function setupRouterGuard(router: Router) {
-    createPageGuard(router);
+    createPageGuard(router)
+    createRouterLoginLoading(router)
+    createPermissionGuard(router)
   }
   
   /**
@@ -23,5 +25,18 @@ export function setupRouterGuard(router: Router) {
     router.afterEach((to) => {
       loadedPageMap.set(to.path, true);
     });
+  }
+
+
+  function createRouterLoginLoading(router: Router) {
+    const token  = localStorage.getItem('token')
+    router.beforeEach(async (to)=>{
+      if(!token) {
+        return true
+      }
+      if (to.meta.loaded) {
+        return true;
+      }
+    })
   }
   

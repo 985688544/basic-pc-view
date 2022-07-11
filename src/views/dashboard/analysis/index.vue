@@ -1,14 +1,12 @@
 <template>
-  <div>test</div>
+  <div>test1111</div>
 </template>
 
 <script>
-import {defineComponent} from 'vue'
-export default defineComponent({
-
-})
+  import { defineComponent } from 'vue';
+  export default defineComponent({
+    setup() {},
+  });
 </script>
 
-<style>
-
-</style>
+<style></style>

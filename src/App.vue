@@ -1,10 +1,8 @@
 <template>
   <div>
-    <RouterView />
+    <router-view></router-view>
+    <!-- <RouterViews /> -->
   </div>
 </template>
 
-<script lang="ts" setup>
-const a: string = "222";
-console.log(a);
-</script>
+<script lang="ts" setup></script>

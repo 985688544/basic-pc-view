@@ -2,15 +2,15 @@ import type { AppRouteModule } from '/@/router/types';
 import { LAYOUT } from '/@/router/constant';
 
 const dashboard:AppRouteModule  = {
-    path: '',
-    name: '',
+  path: '/dashboard',
+  name: 'Dashboard',
     meta: {
         orderNo: 10,
         icon: 'ion:grid-outline',
         title:'首页',
     },
-    redirect: '/dashboard/analysis',
     component: LAYOUT,
+    redirect: '/dashboard/analysis',
     children: [
         {
             path: 'analysis',
