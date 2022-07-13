@@ -1,16 +1,16 @@
 <template>
   <div class="basic-layout">
-    <RouterView></RouterView>
+    <router-view></router-view>
   </div>
 </template>
-
 <script lang="ts">
-  import { defineComponent } from 'vue';
-  export default defineComponent({
-    setup() {
-      console.log('342');
-    },
-  });
+  // import { defineComponent } from 'vue';
+  // export default defineComponent({
+  //   setup() {
+  //     console.log('342');
+  //   },
+  // });
+  export default {};
 </script>
 
 <style lang="less">
